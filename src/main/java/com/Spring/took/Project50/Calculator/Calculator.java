@@ -8,7 +8,7 @@ public class  Calculator{
     public static void main(String[] args) {
         MyCalculator myCalculator = new MyCalculator();
         myCalculator.myCalculatorInput();
-//        myCalculator.bulkAdd("10 10 10 10");
+
     }
 }
 
