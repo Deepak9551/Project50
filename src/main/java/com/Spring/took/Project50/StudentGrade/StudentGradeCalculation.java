@@ -4,6 +4,40 @@ import java.io.*;
 import java.util.Scanner;
 
 public class StudentGradeCalculation {
+    public static void main(String[] args) {
+        System.out.println("==============STUDENT REPORT CARD=============");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Student Name :");
+        String name = sc.nextLine();
+        System.out.println("Enter Student Roll Number :");
+        int rollNumber = sc.nextInt();
+        System.out.println("Enter Physics Marks :");
+        int physics =  sc.nextInt();
+        System.out.println("Enter Chemistry Marks :");
+        int chemistry =  sc.nextInt();
+        System.out.println("Enter Maths Marks :");
+        int maths =  sc.nextInt();
+        System.out.println("Enter English Marks :");
+        int english =  sc.nextInt();
+        System.out.println("Enter Computer Science Marks :");
+        int computer_science =  sc.nextInt();
+
+        Subject subject = new Subject(physics,chemistry,maths,english,computer_science);
+        Student student = new Student(name,rollNumber,subject) ;
+
+        System.out.println("Do you want to save the report ( y / n )!!");
+        String option = sc.next();
+        if (option.equalsIgnoreCase("y")){
+            Student.save_student_report(student);
+
+        }
+        System.out.println("Do you want to see History report ( y / n )!!\"");
+        String showHistory = sc.next();
+        if (showHistory.equalsIgnoreCase("y")){
+            Student.showHistory();
+
+        }
+    }
 }
 class Student{
     private String name;
