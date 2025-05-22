@@ -1,8 +1,6 @@
 package com.Spring.took.Project50.Calculator;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.Scanner;
 public class  Calculator{
     public static void main(String[] args) {
@@ -30,6 +28,7 @@ public class  Calculator{
             System.out.println("6 for Bulk Add");
             System.out.println("7 for Bulk Subtract");
             System.out.println("8 for Bulk Multiple");
+            System.out.println("9 for Print History");
             System.out.println("0 for Exit");
 
             int operation = sc.nextInt();
@@ -156,6 +155,10 @@ public class  Calculator{
                 String multline = sc.nextLine();
                 bulkMultiply(multline);
                 break;
+
+            case 9 :
+                readLog();
+                break;
             case 0 :
                 exit();
                 break;
@@ -174,6 +177,7 @@ public class  Calculator{
     }
     public void subtract(int a , int b){
         System.out.println("Subtract = "+ (a - b));
+        logToFile(a + " - " + b + " = " + (a-b));
     }
     public void multiply(int a , int b){
         System.out.println("Multiply = "+ (a * b));
@@ -198,6 +202,20 @@ public class  Calculator{
         try {
             PrintWriter printWriter = new PrintWriter(new FileWriter("cal.txt",true));
             printWriter.println(msg);
+            printWriter.flush();
+            printWriter.close();
+        } catch (IOException e) {
+            System.out.println("Error writing to file: " + e.getMessage());
+        }
+    }
+
+    public void readLog(){
+        try(BufferedReader bf = new BufferedReader(new FileReader("cal.txt"))) {
+        String line = bf.readLine();
+        while (line!=null){
+            System.out.println(line);
+            line = bf.readLine();
+        }
         } catch (IOException e) {
             System.out.println("Error writing to file: " + e.getMessage());
         }
