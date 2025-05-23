@@ -116,7 +116,7 @@ public class TodoOperation {
 
     public String update(String title, String description) {
         for (Task task : taskList) {
-            if (title.equalsIgnoreCase(title)) {
+            if (task.getTitle().equalsIgnoreCase(title)) {
                 String status = task.isDone() ? "Done" : "Pending";
                 String createdAt = task.getCreatedAt().format(DateTimeFormatter.ofPattern("E, MMM dd yyyy"));
                 task.setDescription(description);
