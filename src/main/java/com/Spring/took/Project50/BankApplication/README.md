@@ -38,12 +38,12 @@ A simple **Java Console-Based Library Management System** that allows users to m
 ## 📁 Project Structure
 
 com.library.console
-│
-├── LibraryApp.java      # Entry point (Main class)
-├── Library.java         # Core logic for managing library
-├── Book.java            # Book entity
-├── User.java            # User entity
-└── InvalidInput.java    # Custom exception class
+- │
+- ├── LibraryApp.java      # Entry point (Main class)
+- ├── Library.java         # Core logic for managing library
+- ├── Book.java            # Book entity
+- ├── User.java            # User entity
+- └── InvalidInput.java    # Custom exception class
 
 ---
 
