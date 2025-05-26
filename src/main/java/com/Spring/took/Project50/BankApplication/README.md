@@ -1,107 +1,98 @@
+# 📚 Java Console Projects (Library & Bank)
 
-# 📚 Java Console Library Management System
-
-A simple **Java Console-Based Library Management System** that allows users to manage books and users through a clean terminal interface. Developed using core Java principles like object-oriented programming and exception handling.
+This repository includes two Java-based console applications:
+- 📖 **Library Management System**: Manage books and users.
+- 🏦 **Bank Management System**: Perform banking operations like account creation, deposit, withdrawal, etc.
 
 ---
 
 ## 🚀 Features
 
-- 📖 Add new books
-- 👤 Register new users
-- 🔍 Search books
-- 📝 Issue books to users
-- 📦 Return books
-- ❌ Handle invalid input using custom exceptions
-- 💾 Simple in-memory structure for books and users
+### 📖 Library App
+- Add books and users
+- Borrow and return books
+- View available and borrowed books
+- Handle invalid inputs with custom exceptions
 
----
-
-## 💡 Tech Stack
-
-- **Java (Core)**
-- Object-Oriented Programming
-- Exception Handling
-- Console-based input/output
+### 🏦 Bank App
+- Create new bank accounts
+- Deposit and withdraw money
+- Check account balance
+- Handle invalid amount and account number with custom exceptions
 
 ---
 
 ## 💻 Technologies Used
 
-- Java
-- Custom Exceptions
-- `Scanner` for console input
-- `ArrayList` and `HashMap` for managing data
+- **Java** (OOP principles)
+- **Exception Handling** (Custom Exceptions)
+- Console Input with `Scanner`
+- Collections like `ArrayList` and `HashMap`
+- Simple class-based structure (POJOs & Operations)
 
 ---
 
 ## 📁 Project Structure
 
-com.library.console
-- │
-- ├── LibraryApp.java      # Entry point (Main class)
-- ├── Library.java         # Core logic for managing library
-- ├── Book.java            # Book entity
-- ├── User.java            # User entity
-- └── InvalidInput.java    # Custom exception class
+### 📖 Library App
+
+LibraryApp.java // Main runner class with menu
+Library.java // Manages book/user operations
+Book.java // POJO for Book
+User.java // POJO for User
+InvalidInput.java // Custom Exception
+
+shell
+Copy
+Edit
+
+### 🏦 Bank App
+
+BankOperation.java // Core logic for banking
+Account.java // POJO for account info
+InvalidAmountException.java // Custom Exception
+InvalidAccountNumber.java // Custom Exception
+
+yaml
+Copy
+Edit
 
 ---
 
-## 📦 Installation
+## 📦 How to Run
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Deepak9551/java-library-console-app.git
-cd java-library-console-app
-```
+git clone https://github.com/Deepak9551/java-console-projects.git
+cd java-console-projects
+2. Compile and Run (for Library)
+bash
+Copy
+Edit
+javac -d bin src/Library/*.java
+java -cp bin LibraryApp
+3. Compile and Run (for Bank)
+bash
+Copy
+Edit
+javac -d bin src/Bank/*.java
+java -cp bin BankOperation
+Make sure Java is installed and configured in your system
 
-### 2. Compile and Run
+🧑‍💻 Author
+Deepak Kumar
 
-```bash
-javac -d bin src/com/library/console/*.java
-java -cp bin com.library.console.LibraryApp
-```
+🔗 GitHub: @Deepak9551
 
-> Ensure Java is installed and properly set in PATH
+💼 LinkedIn: deepak-kumar-a09a63205
 
----
+🌱 Future Enhancements
+📊 GUI version using Swing or JavaFX
 
-## 🛠️ Usage
+📁 Save and load data from files or database
 
-Run the application and interact with the console-based menu:
+🛡️ User authentication and roles (admin/user)
 
-```
-========= Welcome to Library Management System =========
+📈 More reporting and analytics
 
-1. Add Book
-2. Register User
-3. Issue Book
-4. Return Book
-5. Search Book
-6. Exit
-```
-
----
-
-## 🧑‍💻 Author
-
-**Deepak Kumar**
-
-- 🔗 [GitHub: @Deepak9551](https://github.com/Deepak9551)
-- 💼 [LinkedIn: deepak-kumar-a09a63205](https://www.linkedin.com/in/deepak-kumar-a09a63205/)
-
----
-
-## 📈 Future Enhancements
-
-- Save and load data from files
-- Add fine calculation for overdue returns
-- GUI version using JavaFX or Swing
-- Book category and availability filters
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
